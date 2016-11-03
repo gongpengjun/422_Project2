@@ -5,7 +5,7 @@
 	text-align: center; 
 	font-size: 50pt; 
 	font-weight:bold; 
-	color: red
+	color: grey;
 }
 
 #intro {
@@ -13,7 +13,7 @@
 	text-align: center; 
 	font-family: Arial; 
 	font-weight:bold; 
-	color: orange
+	color: black;
 }
 
 #pageStuff {
@@ -21,7 +21,7 @@
 	text-align: center; 
 	font-family: Arial; 
 	font-weight:bold; 
-	color: blue
+	color: green;
 }
 
 #footer {
@@ -29,6 +29,8 @@
 	width:100%;
 	height:100px;
 	background:green;
+	font-size: 20pt; 
+	font-weight:bold; 
 }
 
 body {
