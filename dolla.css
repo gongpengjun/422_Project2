@@ -34,7 +34,10 @@
 	font-size: 20pt; 
 	font-weight:bold; 
 }
-
+/*
+td img {width: 85px; height: 85px;}
+td {width: 85px; height: 85px;}
+*/
 body {
     background-image: url(mainBackground.png);
     -webkit-background-size: cover;
@@ -42,7 +45,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
 
 .button{
     height:50px;
