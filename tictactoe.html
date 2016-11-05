@@ -7,7 +7,20 @@
 
 	var count = 0;
 	var squares = new Array(0,0,0,0,0,0,0,0,0);
+	var tie = 0;
 
+	function xWins(){
+		alert("The Xs win.");
+		window.location.reload();
+		tie = 1;
+	}
+	
+	function oWins(){
+		alert("The Os win.");
+		window.location.reload();
+		tie = 1;
+	}
+	
 	function selectSquare(place)
 	{	
 		if (squares[place] != 0)
@@ -54,8 +67,7 @@
 		|| (squares[0]==1 && squares[4]==1 && squares[8]==1)
 		|| (squares[2]==1 && squares[4]==1 && squares[6]==1))
 		{
-			alert("The Xs win.");
-			window.location.reload();
+			xWins();
 		}
 		//O wins
 		if((squares[0]==2 && squares[1]==2 && squares[2]==2) 
@@ -67,8 +79,7 @@
 		|| (squares[0]==2 && squares[4]==2 && squares[8]==2)
 		|| (squares[2]==2 && squares[4]==2 && squares[6]==2))
 		{
-			alert("The Os win.");
-			window.location.reload();
+			oWins();
 		}
 		//game is full
 		
@@ -78,7 +89,7 @@
 			if(squares[i] == 0)
 			temp = 0;
 		}
-		if (temp == 1)
+		if (temp == 1 && tie == 0)
 		{
 			alert("This is a draw. Press OK for new game.");
 			window.location.reload()
