@@ -27,11 +27,11 @@
 }
 
 #footer {
-	position: absolute;
+	/*position: absolute;*/
 	bottom:0;
 	width:99%;
 	height:100px;
-	background:green;
+	background:lightgreen;
 	font-size: 20pt; 
 	font-weight:bold; 
 }
