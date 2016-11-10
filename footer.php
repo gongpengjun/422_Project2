@@ -10,11 +10,11 @@
                 <tr><td><br></td></tr>
 
                 <tr>
-                        <td width = "100px"><a href="tictactoe.html">Tic Tac Toe</a></td>
-                        <td width = "100px"><a href="memorycard.html">Memory Card</a></td>
-                        <td width = "100px"><a href="blockbreaker.html">Brick Basher</a></td>
-                        <td width = "100px"><a href="hangman.html">Hang Man</a></td>
-                        <td width = "100px"><a href="navigator.html">Navigator</a></td>
+                        <td width = "100px"><a href="tictactoe.php">Tic Tac Toe</a></td>
+                        <td width = "100px"><a href="memorycard.php">Memory Card</a></td>
+                        <td width = "100px"><a href="blockbreaker.php">Brick Basher</a></td>
+                        <td width = "100px"><a href="hangman.php">Hang Man</a></td>
+                        <td width = "100px"><a href="navigator.php">Navigator</a></td>
                 </tr>
         </table>
 </div>
