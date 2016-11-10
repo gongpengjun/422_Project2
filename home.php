@@ -24,7 +24,7 @@
 <div id="pageStuff">
 	<a href = "register.php" class="button">Sign up</a><br><br><br>
 	<a href = "signIn.php" class="button">Log in</a><br><br><br>
-	<a href = "dolla.html" class="button">Play as guest</a><br><br><br>
+	<a href = "dolla.php" class="button">Play as guest</a><br><br><br>
 </div>
 
 
