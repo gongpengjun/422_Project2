@@ -134,7 +134,7 @@
 
 	<div id="button">
 	<br>
-		<a href = "tictactoe.html" class="button">New Game</a>
+		<a href = "tictactoe.php" class="button">New Game</a>
 	</div>
 	
 </div>
