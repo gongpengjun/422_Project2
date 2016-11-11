@@ -3,9 +3,14 @@
                 <tr>
                         <td width = "100px"><a href="index.php">Home</a></td>
                         <td width = "100px"><a href="dolla.php">Games</a></td>
-                        <td width = "100px"><a href="signIn.php">Log In</a></td>
-                        <td width = "100px"><a href="register.php">Sign Up</a></td>
-			<td width = "100px"><a href="signIn.php?logout">Log Out</a></td>
+<?php session_start();
+	if(isset($_SESSION['user_name'])) {
+		echo '<td width = "100px"><a href="signIn.php?logout">Log Out</a></td>';
+	}else{
+		echo '<td width = "100px"><a href="signIn.php">Log In</a></td>';
+                echo '<td width = "100px"><a href="register.php">Sign Up</a></td>';
+	}
+?>
                 </tr>
 
                 <tr><td><br></td></tr>
