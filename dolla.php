@@ -14,8 +14,10 @@
 </div>
 
 <div id ="intro">
-<?php echo "Welcome "; echo $_SESSION['user_name']; ?>
-</div>
+<?php //echo "Welcome "; echo $_SESSION['user_name']; 
+	include_once('accountInfo.php');
+?>
+</div> 
 
 <div id="pageStuff">
 	<table id="table" name="table" border="1" align="center">
