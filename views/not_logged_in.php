@@ -18,7 +18,14 @@ if (isset($login)) {
 <style>
  /* Bordered form */
 form {
-    border: 3px solid #f1f1f1;
+    border: 5px solid darkgrey;
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+}
+
+body {
+    background-color: darkcyan;
 }
 
 /* Full-width inputs */
@@ -33,9 +40,10 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
+    background-color: lightgreen;
     color: white;
-    padding: 14px 20px;
+    font-size: medium;
+    padding: 10px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -46,24 +54,28 @@ button {
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: darkslateblue;
 }
 
 /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
+    background-color: white;
 }
 
 /* Avatar image */
 img.avatar {
     width: 40%;
     border-radius: 50%;
+    background-color: white;
 }
 
 /* Add padding to containers */
 .container {
     padding: 16px;
+    max-width: 500px;
+    background-color: white;
 }
 
 /* The "Forgot password" text */
@@ -83,9 +95,10 @@ span.psw {
     }
 }
 </style>
+<body>
 <form method="post" action="signIn.php" name="loginform">
  <div class="imgcontainer">
-  <img src="hangman.png" alt="DollaTree" class"avater">
+  <img src="DTLogo.png" alt="DollaTree" class"avatar">
  </div>
  <div class="container">
     <!--<label for="login_input_username">Username (or Email)</label>-->
@@ -98,10 +111,10 @@ span.psw {
     <!--<input type="submit"  name="login" value="Log in" />-->
  </div>
 
- <div class="container" style="background-color:#f1f1f1">
+ <div class="container" style="background-color:darkgrey">
   <button type="button" class="cancelbtn">Cancel</button>
-  <span class="psw">Forgot <a href="#">password?</a></span>
+  <span class="psw"><a href="register.php">Register</a></span>
  </div>
 </form>
-
-<a href="register.php">Register new account</a>
+</body>
+<!--<a href="register.php">Register new account</a>-->
