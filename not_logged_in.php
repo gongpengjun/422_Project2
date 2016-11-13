@@ -3,12 +3,12 @@
 if (isset($login)) {
     if ($login->errors) {
         foreach ($login->errors as $error) {
-            echo $error;
+            $output .= $error;
         }
     }
     if ($login->messages) {
         foreach ($login->messages as $message) {
-            echo $message;
+            $output .= $message;
         }
     }
 }
@@ -48,6 +48,12 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+}
+
+.output {
+    text-align: center;
+    color: darkred;
+    font-size: small;
 }
 
 /* Extra style for the cancel button (red) */
@@ -108,12 +114,14 @@ span.psw {
     <input id="login_input_password" class="login_input" type="password" name="user_password" placeholder="Password" autocomplete="off" required />
 
     <button type="submit" name="login" value="Log in">Login</button>
+    <?php
+	echo '<p class="output">'; echo $output; echo '</p>';
+    ?>
     <!--<input type="submit"  name="login" value="Log in" />-->
  </div>
 
  <div class="container" style="background-color:darkgrey">
-  <button type="button" class="cancelbtn">Cancel</button>
-  <span class="psw"><a href="register.php">Register</a></span>
+  <a href="register.php"><button type="button" class="cancelbtn">Register</button></a>
  </div>
 </form>
 </body>
