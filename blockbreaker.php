@@ -18,21 +18,8 @@
 </div>
 
 <div id="pageStuff">
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE BLOCKBREAKER WILL GO<br>
-	Will Stidhem is the best<br>
 
+<script language = "JavaScript" src = "brick/game.js"></script>
 
 </div>
 
