@@ -3,7 +3,7 @@
 
 <title>Dolla Tree Memorycard</title>
 <link href="dolla.css" rel="stylesheet" type="text/css" />
-
+<script language = "JavaScript" src = "memorygame/js/memory.js"></script>
 </head>
 
 <body>
@@ -18,10 +18,6 @@
 </div>
 
 <div id="pageStuff">
-
-<head>
-<script language = "JavaScript" src = "memorygame/js/memory.js"></script>
-</head>
 
 </div>
 

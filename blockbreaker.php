@@ -3,7 +3,7 @@
 
 <title>Dolla Tree BlockBreaker</title>
 <link href="dolla.css" rel="stylesheet" type="text/css" />
-
+<script language = "javascript" src = "brick/game.js"></script>
 </head>
 
 <body>
@@ -18,10 +18,6 @@
 </div>
 
 <div id="pageStuff">
-
-<head>
-<script language = "JavaScript" src = "brick/game.js"></script>
-</head>
 
 </div>
 
