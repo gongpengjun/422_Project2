@@ -18,21 +18,10 @@
 </div>
 
 <div id="pageStuff">
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
-	THIS IS WHERE MEMORYCARD WILL GO<br>
-	Will Stidhem is the best<br>
 
+<head>
+<script language = "JavaScript" src = "memorygame/js/memory.js"></script>
+</head>
 
 </div>
 
