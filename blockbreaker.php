@@ -19,7 +19,9 @@
 
 <div id="pageStuff">
 
+<head>
 <script language = "JavaScript" src = "brick/game.js"></script>
+</head>
 
 </div>
 
