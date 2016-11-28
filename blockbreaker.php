@@ -15,12 +15,15 @@
 
 <div id="intro">
 	Welcome to blockbreaker. This is how you play...<br><br>
+	<iframe src="brick/game.html" height="515" width="515"></iframe>
 </div>
 
 <div id="pageStuff">
 
 </div>
+<div style="height: 150px;">
 
+</div>
 <table border="1" align="center">
 	<tr>
 		<td id ="" height = "20px" width = "150px" name="">Your High Score</td>
