@@ -1,16 +1,3 @@
-/*
- * classList.js: Cross-browser full element.classList implementation.
- * 2014-07-23
- *
- * By Eli Grey, http://eligrey.com
- * Public Domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
- */
-
-/*global self, document, DOMException */
-
-/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
-
 if ("document" in self) {
 
 // Full polyfill for browsers with no classList support
@@ -42,7 +29,6 @@ var
     }
     return -1;
   }
-  // Vendors: please allow content code to instantiate DOMExceptions
   , DOMEx = function (type, message) {
     this.name = type;
     this.code = DOMException[type];
@@ -183,8 +169,6 @@ if (objCtr.defineProperty) {
 }(self));
 
 } else {
-// There is full or partial native classList support, so just check if we need
-// to normalize the add/remove and toggle APIs.
 
 (function () {
   "use strict";
