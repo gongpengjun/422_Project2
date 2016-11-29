@@ -117,53 +117,5 @@
     })();
   </script>
 
-  <!-- ads, fb, twitter, github, analytics -->
-  <script>
-    (function(){
-      var fusoionad_script = document.createElement("script");
-      fusoionad_script.type = "text/javascript";
-      fusoionad_script.async = true;
-      fusoionad_script.id = "_fusionads_js";
-      fusoionad_script.src = "http://cdn.fusionads.net/fusion.js?zoneid=1332&serve=C6SDP2Y&placement=callmenickcom";
-      document.getElementById("footer__ad--container").appendChild(fusoionad_script);
-    })();
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=222982931164932&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-    (function(){
-      var gitFork = document.createElement("iframe");
-      gitFork.setAttribute( "src", "http://ghbtns.com/github-btn.html?user=callmenick&repo=Memory&type=fork&count=true" );
-      gitFork.setAttribute( "allowtransparency", "true" );
-      gitFork.setAttribute( "frameborder", "0" );
-      gitFork.setAttribute( "scrolling", "0" );
-      gitFork.style.width = "95px";
-      gitFork.style.height = "20px";
-      document.getElementById("footer__social--icons-github").appendChild(gitFork);
-      var gitWatch = document.createElement("iframe");
-      gitWatch.setAttribute( "src", "http://ghbtns.com/github-btn.html?user=callmenick&repo=Memory&type=watch&count=true" );
-      gitWatch.setAttribute( "allowtransparency", "true" );
-      gitWatch.setAttribute( "frameborder", "0" );
-      gitWatch.setAttribute( "scrolling", "0" );
-      gitWatch.style.width = "110px";
-      gitWatch.style.height = "20px";
-      document.getElementById("footer__social--icons-github").appendChild(gitWatch);
-    })();
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-34160351-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-  <div id="fb-root"></div>
-
 </body>
 </html>
