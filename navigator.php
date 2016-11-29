@@ -47,7 +47,9 @@ var myGameArea = {
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+	div = document.getElementById("pageStuff");
+        //document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+	div.appendChild(this.canvas);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
@@ -158,7 +160,7 @@ startGame();
 <p>Use the FLY button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </div>
-
+<br><br>
 <table border="1" align="center">
 	<tr>
 		<td id ="" height = "20px" width = "150px" name="">Your High Score</td>
