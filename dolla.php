@@ -25,7 +25,7 @@
 		<td><a href = "blockbreaker.php"><img src="bricks.png" alt="Block breaker" height="150" width="150"></img></a></td>
 	</table>
 	<table id="table" name="table" border="1" align="center">
-		<td><a href = "navigator.php"><img src="navigate.png" alt="Navigator" height="150" width="150"></img></a></td>
+		<td><a href = "navigator.php"><img src="duckIMG.png" alt="DuckFlight" height="150" width="150"></img></a></td>
 		<td><a href = "memorycard.php"><img src="memory.png" alt="" height="150" width="150"></img></a></td>
 	</table>
 <br><br>
