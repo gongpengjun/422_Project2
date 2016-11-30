@@ -110,7 +110,8 @@
 </div>
 
 <div id="intro">
-	Welcome to tic tac toe. This is how you play...<br><br>
+	Welcome to tic tac toe. To win you want to get three x's or three o's in a row.<br>
+	The winning three can be in the same row, column, or diagonal line.<br>
 </div>
 
 <div id="pageStuff">
