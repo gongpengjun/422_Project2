@@ -18,9 +18,8 @@
                 <tr>
                         <td width = "100px"><a href="tictactoe.php">Tic Tac Toe</a></td>
                         <td width = "100px"><a href="memorycard.php">Memory Card</a></td>
-                        <td width = "100px"><a href="blockbreaker.php">Brick Basher</a></td>
-                        <td width = "100px"><a href="hangman.php">Hang Man</a></td>
-                        <td width = "100px"><a href="navigator.php">Navigator</a></td>
+                        <td width = "100px"><a href="blockbreaker.php">Brick Basher</a></td>  
+                        <td width = "100px"><a href="navigator.php">Duck Flight</a></td>
                 </tr>
         </table>
 </div>
