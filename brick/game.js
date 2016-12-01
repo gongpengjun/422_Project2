@@ -1,6 +1,8 @@
 
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
+var isPaused = 0;
+var t;
 var ballRadius = 15;
 var x = canvas.width/2;
 var y = canvas.height-30;
@@ -19,6 +21,8 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = document.getElementById("score").innerHTML;;
+var endGame = 0;
+var submitScore = 0;
 
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
@@ -33,9 +37,15 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function newGame()
-{	
-        document.getElementById("score").innerHTML = 0;
-        document.location.reload();
+{	 
+	if (isPaused == 0) {
+		document.getElementById("score").innerHTML = 0;
+		endGame = setInterval("draw()", 10);
+		isPaused = 1;
+	} else {
+		clearInterval(endGame);
+	}
+        //document.location.reload();
 	    
 }
 
@@ -44,17 +54,34 @@ function keyDownHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
     }
-    else if(e.keyCode == 37) {
+    if(e.keyCode == 37) {
         leftPressed = true;
+    }
+    else if(e.keyCode == 80) {
+        //sleep(5000);
     }
 }
 function keyUpHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = false;
     }
-    else if(e.keyCode == 37) {
+    if(e.keyCode == 37) {
         leftPressed = false;
     }
+    else if(e.keyCode == 80) {
+	//sleep(5000);
+    }
+}
+
+function sleep(miliseconds) {
+   var currentTime = new Date().getTime();
+   if (isPaused) {
+	isPaused = 0;
+   } else {
+	isPaused = 1;
+   }
+   while (true) {
+   }
 }
 
 function drawBall() {
@@ -108,7 +135,8 @@ function collisionDetection() {
                      document.getElementById("score").innerHTML = score;
                      if(score === brickRowCount*brickColumnCount) {
                         alert("YOU WIN, CONGRATULATIONS!");
-                        document.location.reload();
+			newGame();
+                        //document.location.reload();
                     }
                 }
             }
@@ -134,8 +162,15 @@ function draw() {
             dy = -dy;
         }
         else {
-            alert("GAME OVER");
-            document.location.reload();
+            if (!submitScore) {
+                submitScore = 1;        
+                if (confirm("Submit your score?") == true) {
+                        post('/updateScores.php', {score: score});
+                }
+            
+            }
+	    newGame();
+            //document.location.reload();
         }
     }
     
@@ -150,4 +185,27 @@ function draw() {
     y += dy;
 }
 
-setInterval(draw, 10);
+function post(path, params, method) {
+    method = method || "post";
+
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+         }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
+newGame();
+//setInterval(draw, 10);

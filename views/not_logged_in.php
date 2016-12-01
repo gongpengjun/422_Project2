@@ -112,7 +112,7 @@ span.psw {
  </div>
 
  <div class="container" style="background-color:darkgrey">
-  <button type="button" class="cancelbtn">Cancel</button>
+  <a href="index.php"><button type="button" class="cancelbtn">Cancel</button></a>
   <span class="psw"><a href="register.php">Register</a></span>
  </div>
 </form>

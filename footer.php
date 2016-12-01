@@ -22,5 +22,14 @@
                         <td width = "100px"><a href="navigator.php">Duck Flight</a></td>
                 </tr>
         </table>
+
+<?php
+session_start();
+	if(isset($_SESSION['user_name'])) {
+		echo '<div align="center">Welcome ' . $_SESSION['user_name'] . '</div>';
+	} else {
+		echo '<div align="center">Welcome Guest</div>';
+	}
+?>
 </div>
 

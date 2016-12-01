@@ -20,7 +20,10 @@ canvas {
 </div>
 
 <div id="intro">
-	Welcome to the navigation game. This is how you play...<br><br>
+	Welcome to Duck Flight!<br>
+	This little duck has a crippling fear of red<br>
+	and thinks its a seagul... Help guide him back<br>
+	to sanity by clicking the FLY button!<br><br>
 </div>
 
 <div id="pageStuff">
@@ -33,6 +36,7 @@ var duck = new Image();
 duck.src = "duckIMG.png";
 var myObstacles = [];
 var myScore;
+var submitScore = 0;
 
 function startGame() {
     myGamePiece = new component(30, 30, "duckIMG.png", 10, 120, "image");
@@ -119,6 +123,14 @@ function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
         if (myGamePiece.crashWith(myObstacles[i])) {
+	    if (!submitScore) {
+		submitScore = 1;
+		//alert();
+		if (confirm("Submit your score?") == true) {
+			post('/updateScores.php', {score: myGameArea.frameNo});
+		}
+	    
+	    }
             return;
         }
     }
@@ -153,6 +165,29 @@ function everyinterval(n) {
 function fly(n) {
     myGamePiece.gravity = n;
 }
+
+function post(path, params, method) {
+    method = method || "post"; // Set method to post by default if not specified.
+
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+         }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
 startGame();
 </script>
 <br>
@@ -160,18 +195,15 @@ startGame();
 <p>Use the FLY button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </div>
-<br><br>
-<table border="1" align="center">
-	<tr>
-		<td id ="" height = "20px" width = "150px" name="">Your High Score</td>
-		<td id ="" height = "20px" width = "150px" name="">Overall High Score</td>
-	</tr>
+<div id="button" align="center">
+        <br>
+                <a href = "navigator.php" class="button">New Game</a>
+        </div>
 
-	<tr>
-		<td id ="" height = "20px" width = "150px" name=""></td>
-		<td id ="" height = "20px" width = "150px" name=""></td>
-	</tr>
-</table>
+<br><br>
+<?php
+	include_once('requestscores.php');
+?>
 <br><br>	
 
 <?php
