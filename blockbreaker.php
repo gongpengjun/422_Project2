@@ -14,32 +14,29 @@
 </div>
 
 <div id="intro">
-	Welcome to blockbreaker. The Game allow players to aim the ball defliction with the paddle ship special surface. This create unique and fun challenges and adds the ability to avoid obstacles and find sweet spot that enable multiple brick bashes per hit more often.
-...<br><br>
+<?php
+	//include_once('accountInfo.php');
+?>
+	<br>Welcome to blockbreaker! Destroy all of the blocks!<br>
+	Click inside the box and use your left/right arrow keys to move the platform.<br>
+	Don't let the ball hit the ground!<br><br>
 	<iframe src="brick/game.html" height="515" width="515"></iframe>
 </div>
 
 <div id="pageStuff">
-<div id="button">
 
-<br>
-<a href = "blockbreaker.php" class="button">New Game</a>
-</div>
 </div>
 <div style="height: 150px;">
 
 </div>
-<table border="1" align="center">
-	<tr>
-		<td id ="" height = "20px" width = "150px" name="">Your High Score</td>
-		<td id ="" height = "20px" width = "150px" name="">Overall High Score</td>
-	</tr>
-
-	<tr>
-		<td id ="" height = "20px" width = "150px" name=""></td>
-		<td id ="" height = "20px" width = "150px" name=""></td>
-	</tr>
-</table>
+<div id="button" align="center">
+        <br>
+                <a href = "blockbreaker.php" class="button">New Game</a>
+</div>
+<br><br>
+<?php
+	include_once('brickscores.php');
+?>
 <br><br>
 <?php
 	include_once('footer.php');
