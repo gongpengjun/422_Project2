@@ -3,12 +3,12 @@
 if (isset($registration)) {
     if ($registration->errors) {
         foreach ($registration->errors as $error) {
-            echo $error;
+            $output = $error;
         }
     }
     if ($registration->messages) {
         foreach ($registration->messages as $message) {
-            echo $message;
+            $output = $message;
         }
     }
 }
@@ -16,7 +16,7 @@ if (isset($registration)) {
 
 <!-- register form -->
 <!DOCTYPE html>
-<!--<link rel="stylesheet" type="text/css" href="../signIn.css">-->
+
 <!-- login form box -->
 <style>
  /* Bordered form */
@@ -52,6 +52,13 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
+.output {
+    text-align: center;
+    color: darkred;
+    font-size: small;
+}
+
 /* Extra style for the cancel button (red) */
 .cancelbtn {
     width: auto;
@@ -112,13 +119,19 @@ span.psw {
     <input id="login_input_email" class="login_input" type="email" name="user_email" placeholder="email address" required />
 
    <!-- <label for="login_input_password_new">Password (min. 6 characters)</label>-->
-    <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" placeholder="password" pattern=".{6,}" required autocomplete="off" />
+    <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" placeholder="password" pattern=".{6,}" oninvalid="setCustomValidity('Password must be at least 6 characters long ')" required autocomplete="off" />
 
     <!--<label for="login_input_password_repeat">Repeat password</label>-->
     <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" placeholder="repeat password" pattern=".{6,}" required autocomplete="off" />
-    <!--<input type="submit"  name="register" value="Register" />-->
+    <?php
+	echo '<p class="output">'; echo $output; echo '</p>';
+    ?>
     <button type="submit" name="register" value="register">Register</button>
  </div>
+ <div class="container" style="background-color:darkgrey">
+  <a href="signIn.php"><button type="button" class="cancelbtn">Log In</button></a>
+ </div>
+
 </form>
 
 <!-- backlink-->
