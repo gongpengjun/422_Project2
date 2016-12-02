@@ -23,6 +23,11 @@
 
 <div id="container"></div>
 
+<div id="button">
+	<br>
+		<a href = "memorycard.php" class="button">New Game</a>
+	</div>
+
 <br><br>
 
 <?php

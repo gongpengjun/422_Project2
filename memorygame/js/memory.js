@@ -135,6 +135,7 @@
     this.chosenLevel = "";
     this.numMoves = 0;
 
+    //Choosing level
     this.gameMetaHTML = '<div class="mg__meta--left">\
       <span class="mg__meta--level">Level: \
       <span id="mg__meta--level">' + this.chosenLevel + '</span>\
@@ -149,6 +150,7 @@
     this.gameMeta.innerHTML = this.gameMetaHTML;
     this.game.appendChild(this.gameMeta);
 
+    //Start screen
     this.gameStartScreenHTML = '<h2 class="mg__start-screen--heading">Welcome to the Memory Game!</h2>\
       <p class="mg__start-screen--text">Flip the tiles and try to match them up in pairs. Pair up all the tiles to win. Try to complete the game in as few moves as possible!</p>\
       <h3 class="mg__start-screen--sub-heading">Select Level</h3>\
@@ -167,6 +169,7 @@
     this._startScreenEvents();
   }
 
+//How to start the game (Event handlers)
   Memory.prototype._startScreenEvents = function() {
     var levelsNodes = this.gameStartScreen.querySelectorAll("ul.mg__start-screen--level-select span");
     for ( var i = 0, len = levelsNodes.length; i < len; i++ ) {
@@ -184,6 +187,7 @@
     });
   }
 
+//Game setup
   Memory.prototype._setupGameWrapper = function(levelNode) {
     this.level = levelNode.getAttribute("data-level");
     this.gameStartScreen.parentNode.removeChild(this.gameStartScreen);
@@ -196,6 +200,7 @@
     this._renderTiles();
   };
 
+//Creating the tiles
   Memory.prototype._renderTiles = function() {
     this.gridX = this.level * 2 + 2;
     this.gridY = this.gridX / 2;
@@ -222,6 +227,7 @@
     this._gamePlay();
   }
 
+//Game plays --> checking for tiles and game events
   Memory.prototype._gamePlay = function() {
     var tiles = document.querySelectorAll(".mg__tile--inner");
     for (var i = 0, len = tiles.length; i < len; i++) {
@@ -254,6 +260,7 @@
     });
   }
 
+//Do the cards match?
   Memory.prototype._gameCardsMatch = function() {
     var self = this;
 
@@ -275,6 +282,7 @@
     this._gameCounterPlusOne();
   };
 
+//Cards don't match
   Memory.prototype._gameCardsMismatch = function() {
     var self = this;
 
@@ -287,6 +295,7 @@
     this._gameCounterPlusOne();
   };
 
+//Game reset
   Memory.prototype._gameResetVars = function() {
     this.card1 = "";
     this.card2 = "";
@@ -296,11 +305,13 @@
     this.card2flipped = false;
   }
 
+//Move counter
   Memory.prototype._gameCounterPlusOne = function() {
     this.numMoves = this.numMoves + 1;
     this.moveCounterUpdate = document.getElementById("mg__meta--moves").innerHTML = this.numMoves;
   };
 
+//Clearing the game
   Memory.prototype._clearGame = function() {
     if (this.gameMeta.parentNode !== null) this.game.removeChild(this.gameMeta);
     if (this.gameStartScreen.parentNode !== null) this.game.removeChild(this.gameStartScreen);
@@ -308,6 +319,7 @@
     if (this.gameMessages.parentNode !== null) this.game.removeChild(this.gameMessages);
   }
 
+//Winning the game
   Memory.prototype._winGame = function() {
     var self = this;
     if (this.options.onGameEnd() === false) {
@@ -325,6 +337,7 @@
     }
   }
 
+//Reset the game
   Memory.prototype.resetGame = function() {
     this._clearGame();
     this._setupGame();
