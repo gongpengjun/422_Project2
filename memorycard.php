@@ -23,7 +23,7 @@
 
 <div id="container"></div>
 
-<div id="button">
+<div id="button" align="center">
 	<br>
 		<a href = "memorycard.php" class="button">New Game</a>
 	</div>
